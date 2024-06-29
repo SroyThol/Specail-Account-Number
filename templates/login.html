@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opening Account | Login</title>
+    <link rel="icon" type="image/x-icon" href="../images/cana-logo.png" />
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- jquery -->
+    <script src="../javascript/jquery.min.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      @font-face {
+        font-family: 'Eina01-Semibold';
+        font-style: normal;
+        src: url('../font/Eina01-SemiBold.ttf');
+      }
+
+      @font-face {
+        font-family: 'Acme-Regular';
+        src: url('../font/Acme-Regular.ttf');
+        font-style: normal;
+      }
+
+      * {
+        font-family: 'Eina01-Semibold', sans-serif;
+      }
+
+      .l-width {
+        width: 75% !important;
+      }
+
+      body {
+        margin: 0;
+        height: 100vh;
+      }
+
+      .wrap-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .background {
+        display: block;
+        background: linear-gradient(315deg, #231a59, #dc1055, #fce38f);
+      }
+
+      .login-section {
+        padding: 0 50px;
+      }
+
+      .logo-img {
+        width: 200px;
+      }
+
+      .title {
+        padding: 10px 0 0 0;
+        font-size: 35px;
+        line-height: 43.62px;
+        text-transform: uppercase;
+        text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+        background: linear-gradient(
+            86.85deg,
+            #3944aa 2.51%,
+            #ed4055 43.65%,
+            #ede229 113.7%,
+            #edd62c 121.53%,
+            #edda2b 121.54%,
+            #edde2a 121.56%,
+            #615e11 125.31%,
+            #ede927 125.32%,
+            #edeb27 125.33%,
+            #edec26 125.35%,
+            #edee26 125.36%,
+            #edf224 125.37%,
+            #edf623 125.38%,
+            #edfb22 125.4%,
+            #edff21 125.41%,
+            #edff21 125.41%,
+            #edff21 125.41%,
+            #edff21 125.41%,
+            #edff21 125.41%,
+            #edff21 125.41%
+          ),
+          #fd0000;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .subtitle {
+        font-size: 20px;
+        text-align: center;
+        background: linear-gradient(
+          91.55deg,
+          rgba(177, 9, 9, 0.5) -9.11%,
+          rgba(0, 19, 187, 0.5) 101.18%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .textbox {
+        position: relative;
+        margin-bottom: 16px;
+        margin-top: 24px;
+        width: 100%;
+        height: 84px;
+        box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .textbox .input {
+        padding: 0 34px;
+        height: 84px;
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        outline: none;
+        font-size: 18px;
+      }
+
+      input:autofill {
+        background: #fff;
+      }
+
+      input:-webkit-autofill,
+      input:-webkit-autofill:hover,
+      input:-webkit-autofill:focus,
+      input:-webkit-autofill:active {
+        transition: background-color 9999s ease-in-out 0s;
+      }
+
+      :is(.input:focus, .input:valid) ~ label {
+        translate: -10px -32px;
+        scale: 0.875;
+        background-color: white;
+        padding: 0px 4px;
+        font-size: 13px;
+      }
+
+      .input:focus ~ label {
+        color: #6a6a6a;
+        font-weight: 400;
+      }
+
+      .input:focus {
+        border-image: linear-gradient(#231a59, #dc1055) 30;
+        border-left: 10px solid;
+        padding: 0 24px;
+      }
+
+      :is(.input:focus, .input:valid) ~ span {
+        color: rgba(129, 129, 129, 0.96);
+      }
+
+      .textbox label {
+        position: absolute;
+        top: 50%;
+        left: 30px;
+        line-height: 1;
+        font-size: 16px;
+        translate: 0 -50%;
+        color: #b1b1b1;
+        pointer-events: none;
+        transition: 0.4s;
+        font-weight: lighter;
+      }
+
+      .button-login {
+        border: none;
+        background: transparent;
+        margin-top: 40px;
+      }
+
+      .button-text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        letter-spacing: 8px;
+        line-height: 41px;
+        background: linear-gradient(
+            86.85deg,
+            #3944aa 2.51%,
+            #ed4055 43.65%,
+            #ede229 113.7%,
+            #edd62c 121.53%,
+            #edda2b 121.54%,
+            #edde2a 121.56%,
+            #615e11 125.31%,
+            #ede927 125.32%,
+            #edeb27 125.33%,
+            #edec26 125.35%,
+            #edee26 125.36%,
+            #edf224 125.37%,
+            #edf623 125.38%,
+            #edfb22 125.4%,
+            #edff21 125.41%,
+            #edff21 125.41%,
+            #edff21 125.41%,
+            #edff21 125.41%,
+            #edff21 125.41%,
+            #edff21 125.41%
+          ),
+          #eaa500;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        padding-right: 10px;
+      }
+
+      .message-container {
+        width: 180px;
+      }
+
+      @media screen and (max-width: 400px) {
+        .login-section {
+          padding: 0 20px !important;
+        }
+
+        .message-container {
+          width: 130px;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .login-section {
+          padding: 0 20px !important;
+        }
+      }
+
+      @media screen and (max-width: 1023px) {
+        .wrap-container {
+          display: grid;
+          grid-template-columns: repeat(1, minmax(0, 1fr));
+          height: 100%;
+          overflow-y: auto;
+          overflow-x: hidden;
+        }
+
+        .logo-img {
+          width: 160px;
+        }
+
+        .background {
+          display: none;
+        }
+
+        .login-section {
+          padding: 0 100px;
+        }
+
+        .title {
+          font-size: 24px;
+          line-height: 43.62px;
+        }
+
+        .button-text {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          letter-spacing: 6px;
+          line-height: 41px;
+          background: linear-gradient(
+              86.85deg,
+              #3944aa 2.51%,
+              #ed4055 43.65%,
+              #ede229 113.7%,
+              #edd62c 121.53%,
+              #edda2b 121.54%,
+              #edde2a 121.56%,
+              #615e11 125.31%,
+              #ede927 125.32%,
+              #edeb27 125.33%,
+              #edec26 125.35%,
+              #edee26 125.36%,
+              #edf224 125.37%,
+              #edf623 125.38%,
+              #edfb22 125.4%,
+              #edff21 125.41%,
+              #edff21 125.41%,
+              #edff21 125.41%,
+              #edff21 125.41%,
+              #edff21 125.41%,
+              #edff21 125.41%
+            ),
+            #eaa500;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          padding-right: 10px;
+        }
+      }
+
+      @media only screen and (min-width: 1024px) and (max-width: 1366px) {
+        .l-width {
+          width: 100% !important;
+        }
+      }
+
+      .loader {
+        position: absolute;
+        top: calc(50% - 32px);
+        left: calc(50% - 32px);
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        perspective: 800px;
+      }
+
+      .inner {
+        position: absolute;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+
+      .inner.one {
+        left: 0%;
+        top: 0%;
+        animation: rotate-one 1s linear infinite;
+        border-bottom: 3px solid #f90022;
+      }
+
+      .inner.two {
+        right: 0%;
+        top: 0%;
+        animation: rotate-two 1s linear infinite;
+        border-right: 3px solid #f90022;
+      }
+
+      .inner.three {
+        right: 0%;
+        bottom: 0%;
+        animation: rotate-three 1s linear infinite;
+        border-top: 3px solid #f90022;
+      }
+
+      @keyframes rotate-one {
+        0% {
+          transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+        }
+
+        100% {
+          transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+        }
+      }
+
+      @keyframes rotate-two {
+        0% {
+          transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+        }
+
+        100% {
+          transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+        }
+      }
+
+      @keyframes rotate-three {
+        0% {
+          transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+        }
+
+        100% {
+          transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+        }
+      }
+    </style>
+  </head>
+
+  <body
+    style="
+      background-image: url('../images/bg-tower.png');
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: cover;
+    "
+  >
+    <div class="loader" style="display: none" id="loading">
+      <div class="inner one"></div>
+      <div class="inner two"></div>
+      <div class="inner three"></div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="errorModal"
+      tabindex="-1"
+      aria-labelledby="errorModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-5">
+          <div
+            class="modal-body d-flex align-items-center justify-content-center"
+          >
+            <div class="" style="text-align: center">
+              <svg
+                height="60"
+                viewBox="0 0 43 43"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.5 0C9.62662 0 0 9.62528 0 21.5C0 33.3747 9.62528 43 21.5 43C33.3747 43 43 33.3747 43 21.5C43 9.62528 33.3747 0 21.5 0ZM21.5 40.3555C11.1263 40.3555 2.6875 31.8737 2.6875 21.5C2.6875 11.1263 11.1263 2.6875 21.5 2.6875C31.8737 2.6875 40.3125 11.1263 40.3125 21.5C40.3125 31.8737 31.8737 40.3555 21.5 40.3555ZM29.1016 13.8997C28.5775 13.3757 27.7269 13.3757 27.2015 13.8997L21.5013 19.5999L15.8012 13.8997C15.2771 13.3757 14.4252 13.3757 13.8997 13.8997C13.3743 14.4238 13.3757 15.2758 13.8997 15.7998L19.5999 21.5L13.8997 27.2002C13.3757 27.7243 13.3757 28.5762 13.8997 29.1003C14.4238 29.6243 15.2757 29.6243 15.8012 29.1003L21.5013 23.4001L27.2015 29.1003C27.7256 29.6243 28.5762 29.6243 29.1016 29.1003C29.627 28.5762 29.6257 27.7243 29.1016 27.2002L23.4014 21.5L29.1016 15.7998C29.627 15.2744 29.627 14.4238 29.1016 13.8997Z"
+                  fill="#C90F0F"
+                />
+              </svg>
+              <div
+                class="mt-2"
+                style="font-weight: bold; font-size: 22px; line-height: 30px"
+              >
+                Error
+              </div>
+              <div style="color: #c90f0f; line-height: 12px; font-size: 12px">
+                Invalid Login
+              </div>
+
+              <button
+                type="button"
+                style="
+                  background: linear-gradient(
+                      140deg,
+                      #121b67 0%,
+                      #ed4055 66.31%,
+                      #edd62c 115.79%,
+                      #edda2b 115.8%,
+                      #edde2a 115.81%,
+                      #ede229 115.83%,
+                      #615e11 119.47%,
+                      #ede927 119.48%,
+                      #edeb27 119.49%,
+                      #edec26 119.5%,
+                      #edee26 119.51%,
+                      #edf224 119.53%,
+                      #edf623 119.54%,
+                      #edfb22 119.55%,
+                      #edff21 119.56%,
+                      #edff21 119.56%,
+                      #edff21 119.56%,
+                      #edff21 119.56%,
+                      #edff21 119.56%,
+                      #edff21 119.56%
+                    ),
+                    #dbdbdb;
+                  border: none;
+                  color: white;
+                "
+                class="btn mt-4 px-4 py-2"
+                data-bs-dismiss="modal"
+              >
+                Try Again
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap-container" id="container">
+      <div class="background">
+        <!-- <div style="
+                        background-image: url('../images/login.png');
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        min-height: 100% !important;
+                    "></div> -->
+
+        <div
+          class="vh-100 d-flex flex-column justify-content-center align-items-center w-100"
+        >
+          <div class="l-width l-top flex-1">
+            <img src="../images/top.png" alt="" class="w-100 mb-4" />
+          </div>
+          <div class="l-width l-bottom">
+            <img src="../images/bottom.png" alt="" class="w-100" />
+          </div>
+        </div>
+      </div>
+      <div class="d-flex flex-column justify-content-center">
+        <div class="login-section">
+          <img
+            class="logo-img mb-4"
+            src="../images/CNB_LOGO.png"
+            alt="CNB_LOGO.png"
+          />
+          <div style="width: fit-content" class="mb-4">
+            <div class="title">Center of Excellence</div>
+
+            <div
+              style="font-family: 'Acme-Regular', sans-serif"
+              class="subtitle"
+            >
+              Banking Anywhere
+            </div>
+          </div>
+
+          <form class="form" action="#" method="POST" id="frm_login">
+            <div class="textbox" id="ttuser">
+              <input
+                type="text"
+                name="datas[username]"
+                id="staffID"
+                class="input"
+                required
+              />
+              <label for="">Username</label>
+            </div>
+
+            <div class="textbox d-flex align-items-center w-100" id="ttpwd">
+              <input
+                type="password"
+                name="datas[password]"
+                id="pwd"
+                class="input"
+                required
+              />
+              <input type="hidden" name="datas[timestamp]" id="tstp" />
+              <label for="">Password</label>
+
+              <span
+                id="showPass"
+                style="padding-right: 30px; position: absolute; right: 0"
+              >
+                <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                <i
+                  class="fa fa-eye"
+                  aria-hidden="true"
+                  style="display: none"
+                ></i>
+              </span>
+            </div>
+
+            <!-- Button trigger modal -->
+            <!-- Please delete this -->
+            <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#errorModal">
+                            Launch demo modal
+                        </button> -->
+
+            <div class="d-flex justify-content-end align-items-center">
+              <button
+                class="button-login d-flex align-items-center"
+                type="button"
+                name="login"
+                onclick="sub_log()"
+              >
+                <div class="button-text">LOGIN</div>
+                <svg
+                  width="39"
+                  height="34"
+                  viewBox="0 0 47 42"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M25.8889 30.5L35.4444 21M35.4444 21L25.8889 11.5M35.4444 21H2M13.9444 30.5V32.875C13.9444 34.7647 14.6995 36.5769 16.0435 37.9131C17.3875 39.2493 19.2104 40 21.1111 40H37.8333C39.7341 40 41.5569 39.2493 42.9009 37.9131C44.2449 36.5769 45 34.7647 45 32.875V9.125C45 7.23533 44.2449 5.42306 42.9009 4.08686C41.5569 2.75067 39.7341 2 37.8333 2H21.1111C19.2104 2 17.3875 2.75067 16.0435 4.08686C14.6995 5.42306 13.9444 7.23533 13.9444 9.125V11.5"
+                    stroke="url(#paint0_linear_97_40)"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_97_40"
+                      x1="45"
+                      y1="2"
+                      x2="8.60515"
+                      y2="45.5233"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#121B67" />
+                      <stop offset="0.276042" stop-color="#ED4055" />
+                      <stop offset="0.96845" stop-color="#EDD62C" />
+                      <stop offset="0.96855" stop-color="#EDDA2B" />
+                      <stop offset="0.96865" stop-color="#EDDE2A" />
+                      <stop offset="0.96875" stop-color="#EDE229" />
+                      <stop offset="0.9992" stop-color="#615E11" />
+                      <stop offset="0.9993" stop-color="#EDE927" />
+                      <stop offset="0.9994" stop-color="#EDEB27" />
+                      <stop offset="0.9995" stop-color="#EDEC26" />
+                      <stop offset="0.9996" stop-color="#EDEE26" />
+                      <stop offset="0.9997" stop-color="#EDF224" />
+                      <stop offset="0.9998" stop-color="#EDF623" />
+                      <stop offset="0.9999" stop-color="#EDFB22" />
+                      <stop offset="1" stop-color="#EDFF21" />
+                      <stop offset="1" stop-color="#EDFF21" />
+                      <stop offset="1" stop-color="#EDFF21" />
+                      <stop offset="1" stop-color="#EDFF21" />
+                      <stop offset="1" stop-color="#EDFF21" />
+                      <stop offset="1" stop-color="#EDFF21" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    function sub_log() {
+      $('.button-login').attr('disabled', 'disabled')
+
+      //handle submit in this function
+    }
+
+    $(document).ready(function () {
+      $('#showPass').click(function () {
+        if ($('#pwd').attr('type') == 'password') {
+          $('#pwd').attr('type', 'text')
+        } else {
+          $('#pwd').attr('type', 'password')
+        }
+      })
+      $('#showPass').click(function () {
+        $('#showPass i').toggle()
+      })
+    })
+  </script>
+</html>

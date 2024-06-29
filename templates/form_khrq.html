@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Special Account Number KHQR Transfer</title>
+        <link rel="icon" type="image/x-icon" href="../images/cana-logo.png" />
+
+        <!-- css -->
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <link rel="stylesheet" href="../css/custom.css" />
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+        <!-- date picker -->
+        <link rel="stylesheet" href="../css/bootstrap-datepicker3.min.css">
+
+        <script src="../javascript/jquery.min.js"></script>
+        <script src="../javascript/bootstrap-datepicker3.min.js"></script>
+        <script src="../javascript/select2.min.js"></script>
+
+
+        <!-- select option -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+
+        <style>
+            :is(.input:focus, .input:valid)~#lissus,
+            :is(.input:focus, .input:valid)~#lexpire {
+                width: 90%;
+                font-size: 10px;
+            }
+
+            #lissus,
+            #lexpire {
+                font-size: 12px;
+            }
+
+            @media only screen and (max-width: 1080px) {
+                select.type-card+.select2 .select2-selection.select2-selection--single {
+                    margin-left: 0;
+                }
+
+                .arrow-down-type-card {
+                    margin-right: 0.5rem !important;
+                }
+
+                .arrow-down-type-card-type {
+                    margin-left: 0.5rem !important;
+                }
+            }
+
+            .divider {
+                width: 100%;
+                height: 3px;
+                background: linear-gradient(122.05deg, #121B67 0%, #ED4055 66.31%, #EDD62C 115.79%, #EDDA2B 115.8%, #EDDE2A 115.81%, #EDE229 115.83%, #615E11 119.47%, #EDE927 119.48%, #EDEB27 119.49%, #EDEC26 119.5%, #EDEE26 119.51%, #EDF224 119.53%, #EDF623 119.54%, #EDFB22 119.55%, #EDFF21 119.56%, #EDFF21 119.56%, #EDFF21 119.56%, #EDFF21 119.56%, #EDFF21 119.56%, #EDFF21 119.56%),
+                    linear-gradient(0deg, #D9D9D9, #D9D9D9);
+                /* -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent; */
+
+            }
+
+            /* update inputbox to inputboxs */
+.inputboxs {
+  position: relative;
+  /* margin-bottom: 18px; */
+  width: 100%;
+  height: 60px;
+  /* border: 1px solid #5f5f5f; */
+  border-radius: 5px;
+}
+.inputboxs .input {
+  padding: 0 18px 0 55px;
+  height: 100%;
+  outline: none;
+  color: #2f2f2f;
+  width: 100%;
+  border-radius: 5px;
+  background: #dcdcdc !important;
+}
+/* End update inputbox to inputboxs */
+
+
+
+/* update by thol: background-color */
+.inputbox .input {
+  padding: 0 18px 0 55px;
+  height: 100%;
+  outline: none;
+  color: #2f2f2f;
+  width: 100%;
+  border-radius: 5px;
+  background: #dcdcdc !important;
+}
+
+/* update by thol ( name input to input_box )*/
+:is(.input_box:focus, .input_box:valid) ~ label {
+  translate: -40px -33.5px;
+  scale: 0.875;
+  background-color: white;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.inputbox .input_box {
+  padding: 0 18px 0 55px;
+  height: 100%;
+  outline: none;
+  color: #2f2f2f;
+  width: 100%;
+  border-radius: 5px;
+  background-color: white;
+}
+/* update by thol ( name input to input_box )*/
+
+/* update inputbox to inputboxs */
+.inputboxs label {
+  position: absolute;
+  top: 50%;
+  left: 55px;
+  line-height: 1;
+  font-size: 14px;
+  translate: 0 -50%;
+  color: #6a6a6a;
+  pointer-events: none;
+  transition: 0.4s;
+  font-weight: 500;
+}
+/* end update inputbox to inputboxs */
+
+            :is(.input:disabled, select:disabled) ~ label {
+                left: 0;
+                top: -13px;
+            }
+            
+        </style>
+    </head>
+
+    <body class="form-background">
+        <div class="wrap-container" style="font-family: 'Eina01-Semibold', sans-serif">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-inline-flex">
+                    <!-- Arrow Icon -->
+                    <a href="/templates/e-services.html" class="me-4">
+                        <img src="../images/back-arrow.svg" alt="back" width="40" />
+                    </a>
+
+                    <div class="custom-text form-title">
+                        Special Account Number Request <br /> Review and Input Information
+                        
+                    </div>
+                </div>
+                <img class="canadia-logo" src="../images/cana-logo.png" alt="logo" />
+            </div>
+
+            <div class="divider mt-3"></div>
+            <!-- start customer form -->
+            <div class="info-container">
+                <div class="px-2 mt-4 mb-3">
+                    <div class="form-section">Personal Particulars</div>
+                    <div class="pt-1" style="color: #797979; font-size: 14px">
+                        CID: 123456
+                    </div>
+                </div>
+
+                <div class="container-fluid px-0">
+                    <div class="row gx-5 mx-0">
+                        <div class="col-12 col-md-6 p-2 mt-3">
+                            <div class="inputboxs">
+                            <img
+                                src="../../images/person.svg"
+                                alt="first-name-en"
+                                class="position-absolute"
+                                style="
+                                height: 32px;
+                                width: 32px;
+                                top: 12px;
+                                bottom: 0px;
+                                left: 0px;
+                                z-index: 10;
+                                padding-left: 18px;
+                                "
+                            />
+            
+                            <input
+                                style="border: none;"
+                                class="input"
+                                type="text"
+                                required
+                                value="NY CLINTON"
+                                disabled
+                                id="fullname"
+                                name="fullname"
+                            />
+                            <label>Full Name </label>
+                            </div>
+                            
+                        </div>
+                        <div class="col-12 col-md-6 p-2 mt-3">
+                            <div class="gender-label">
+                                Gender
+                            </div>
+                            <div class="button-box d-flex justify-content-between">
+                                <button type="button" id="male-btn" class="toggle-btn active-in">
+                                    <span class="pe-1"> </span> Male
+                                </button>
+                                <button type="button" id="female-btn" class="toggle-btn">
+                                    <span class="pe-1"> </span> Female
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 p-2 mt-3">
+                            <div class="inputboxs">
+                                <img
+                                  src="../../images/calendar.svg"
+                                  alt="issue_date"
+                                  class="position-absolute"
+                                  style="
+                                    height: 18px;
+                                    top: 20px;
+                                    bottom: 0px;
+                                    left: 0px;
+                                    padding-left: 18px;
+                                    z-index: 10;
+                                  "
+                                />
+                                <input
+                                  style="border: none"
+                                  type="text"
+                                  class="input"
+                                  id="issueDate"
+                                  disabled
+                                  name="issueDate"
+                                  value="14/12/1996"
+                                />
+                                <label>Date of Birth </label>
+                              </div>
+                        </div>
+                        <div class="col-12 col-sm-6 p-2 mt-3">
+                            <div class="inputboxs d-flex align-items-center" style="background: #dcdcdc;">
+                                <img src="../images/profile.svg" alt="Saving" class="" style="
+                                height: 15px;
+                                top: 24px;
+                                bottom: 0px;
+                                left: 0px;
+                                z-index: 10;
+                                padding-left: 18px;
+                            ">
+
+                                <input
+                                style=" border: none;
+                                height: 100%;
+                                width: 80%; padding-left: 10%; background: none"
+                                class="input"
+                                type="text"
+                                required
+                                value="12458555799"
+                                disabled
+                                id="NID"
+                                name="NID"
+                                />
+
+                                <div class="d-flex" style="border-left: 1px solid #797979">
+
+                                    <input
+                                        style=" width: 100%;
+                                        
+                                        border: none;
+                                        height: 30px;
+                                        color: black"
+                                        class="input"
+                                        type="text"
+                                        required
+                                        value="1.NID"
+                                        disabled
+                                        id="NID"
+                                        name="NID"
+                                    />
+                                    <label>Legal Document Number  / Type</label>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="px-2 mt-3 pb-3">
+                            <div class="form-section">Applying For 9 Digit Account</div>
+                            <div class="pt-1" style="color: #797979; font-size: 14px">
+                                Please input following information to finish the process
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 p-2 mt-3">
+                            <div class="inputboxs">
+                                <img
+                                    src="../../images/account-icon.svg"
+                                    alt="residence"
+                                    class="position-absolute"
+                                    style="
+                                        height: 15px;
+                                        top: 23px;
+                                        bottom: 0px;
+                                        left: 0px;
+                                        z-index: 10;
+                                        padding-left: 18px;
+                                    "
+                                    />
+                
+                                <input
+                                    style="border: none;"
+                                    class="input"
+                                    type="text"
+                                    required
+                                    value="093334589"
+                                    disabled
+                                    id="digitalAccount"
+                                    name="digitalAccount"
+                                />
+                                <label>9digital Account.1</label>
+                                </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 p-2 mt-3">
+                            <div class="inputbox">
+                                <img src="../images/cash-icon.svg" alt="nid" class="position-absolute" style="
+                                height: 18px;
+                                top: 20px;
+                                bottom: 0px;
+                                left: 0px;
+                                z-index: 10;
+                                padding-left: 18px;
+                        ">
+
+                                <input style="border: none" class="input_box" type="text" required />
+                                <label><span id="legalVal">Price</span>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="mx-2 mt-3">
+                    <div class="form-section">Account Setup</div>
+                    <div class="pt-1" style="color: #797979; font-size: 14px">
+                        Please input following information to finish the process
+                    </div>
+                </div>
+
+                <div class="acc-container">
+                    <!-- input field: Account Types -->
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-10 col-sm-11 p-2 mt-3">
+                                <div class="inputbox bg-white d-flex align-items-center">
+                                    <img src="../images/profile.svg" alt="Saving" class="position-absolute" style="
+                                    height: 15px;
+                                    top: 24px;
+                                    bottom: 0px;
+                                    left: 0px;
+                                    z-index: 10;
+                                    padding-left: 18px;
+                                ">
+
+                                    <select style="
+                                            border: none;
+                                            height: 100%;
+                                            width: 80%;
+                                        " class="input js-selector">
+                                        <!-- <option selected>Account Types</option> -->
+                                        <option value="Saving Account">
+                                            Saving Account
+                                        </option>
+                                        <option value="Current Account">
+                                            Current Account
+                                        </option>
+                                        <option value="RGC Payroll Account">
+                                            RGC Payroll Account
+                                        </option>
+                                        <option value="Elite Account">
+                                            Elite Account
+                                        </option>
+                                    </select>
+                                    <label>Account Types
+                                        <div class="d-inline-flex" style="color: #921d1d">
+                                            *
+                                        </div>
+                                    </label>
+
+                                    <img src="../images/arrow-down.svg" alt="down" class="arrow-down me-4" />
+
+                                    <div class="d-flex" style="border-left: 1px solid #797979">
+                                        <select class="js-selector" style="
+                                                width: 100%;
+                                                outline: none;
+                                                height: 30px;
+                                                border-left: 1px solid #797979 !important;
+                                            ">
+                                            <option value="USD" selected>
+                                                USD
+                                            </option>
+                                            <option value="KHR">KHR</option>
+                                        </select>
+                                    </div>
+
+                                    <img src="../images/arrow-down.svg" alt="down"
+                                        class="ms-4 mt-1 arrow-down-acc-type" />
+                                </div>
+                            </div>
+                            <div class="col-2 col-sm-1 p-2 mt-2 d-flex justify-content-end">
+                                <img src="../images/plus.svg" id="add-acc" alt="plus" width="30"
+                                    style="margin-top: 10px; cursor: pointer" />
+                            </div>
+
+                            <div class="px-2 mt-3">
+                                <div class="form-section">Price Charge </div>
+                                <div class="pt-1" style="color: #797979; font-size: 14px">
+                                    Please select account to pay for Price charge 
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-12 p-2 mt-3">
+                                <div class="inputbox bg-white d-flex align-items-center justify-content-between"
+                                    id="price_charge_type">
+                                    <img src="../images/cash-icon.svg" alt="price_charge_type" class="position-absolute"
+                                        style=" height: 15px; top: 23px; bottom: 0px;left: 0px;z-index: 10;padding-left: 18px;">
+                                        <select style="
+                                            border: none;
+                                            height: 100%;
+                                            width: 80%;
+                                        " class="input js-selector">
+                                        <!-- <option selected>Account Types</option> -->
+                                        <option value="Saving Account">
+                                            KHQR Transfer
+                                        </option>
+                                        <option value="Current Account">
+                                            Current Account
+                                        </option>
+                                        <option value="RGC Payroll Account">
+                                            RGC Payroll Account
+                                        </option>
+                                        <option value="Elite Account">
+                                            Elite Account
+                                        </option>
+                                    </select>
+                                    <label>
+                                        Price Charge Type
+                                    </label>
+                                    <img src="../images/arrow-down.svg" alt="down" class="arrow-down me-4" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- start staff referral -->
+                <div class="row">
+                    <div class="col-12 px-4
+                    p-2">
+                    <div class="px-0 mt-2 pb-4">
+                        <div class="form-section fs-5">Staff Referral</div>
+                        <div class="pt-1" style="color: #797979; font-size: 14px">
+                            Please select Staff ID
+                        </div>
+                    </div>
+                        <div class="inputbox">
+                            <img src="../images/nid_card.svg" alt="nid" class="position-absolute" style="
+                            height: 18px;
+                            top: 20px;
+                            bottom: 0px;
+                            left: 0px;
+                            z-index: 10;
+                            padding-left: 18px;
+                    ">
+
+                            <input style="border: none" class="input_box" type="text" required />
+                            <label><span id="legalVal">Staff</span>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- button -->
+                <div class="mt-5 mb-2 d-flex align-items-center justify-content-between">
+                    <button style="
+                            border: transparent;
+                            background-image: url('../images/bg-button.png');
+                            background-position: left;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            font-size: 13px;
+                        " class="btn button-back rounded-3 text-white">
+                        <a style="text-decoration: none; color: white" href="/templates/customer-type.html">Back
+                            Home</a>
+                    </button>
+                    <button style="
+                            border: transparent;
+                            background-image: url('../images/bg-button.png');
+                            background-position: left;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            font-size: 13px;
+                        " class="btn button-continue rounded-3 text-white">
+                        <a style="text-decoration: none; color: white" href="#">Submit</a>
+                    </button>
+                </div>
+            </div>
+            <!-- end customer form -->
+        </div>
+        <script src="../javascript/country.js"></script>
+
+        <script type="text/javascript">
+            $(function () {
+                var maleBtn = document.getElementById('male-btn');
+                var femaleBtn = document.getElementById('female-btn');
+                let legalSelect = $("select#legalId");
+                let legalValue = $("span#legalVal");
+
+                legalSelect.on("change", function (e) {
+                    let val = $(this).val();
+                    if (val === "passport") {
+                        legalValue.html("Passport Number");
+                    } else if (val === "other") {
+                        legalValue.html("Other");
+                    } else {
+                        legalValue.html("NID Number");
+                    }
+                });
+
+                maleBtn.addEventListener('click', (e) => {
+                    femaleBtn.classList.remove('active-in');
+                    maleBtn.classList.add('active-in');
+                });
+
+                femaleBtn.addEventListener('click', (e) => {
+                    maleBtn.classList.remove('active-in');
+                    femaleBtn.classList.add('active-in');
+                });
+
+                let selectNationality = $("select[name=nationality]");
+                $("div#nationality").click(() => {
+                    selectNationality.select2('open');
+                });
+
+
+
+                const checkbox = $('#checkDebitCard');
+                $('.required-d-card').addClass('d-none');
+                $('.block-debit').hide();
+
+                checkbox.on('change', () => {
+                    const isCheck = checkbox.is(':checked');
+                    $('.required-d-card')
+                        .parent()
+                        .parent()
+                        .find('select.js-selector')
+                        .each((idx, value) => {
+                            $(value).prop('required', isCheck);
+                        });
+
+                    if (!isCheck) {
+                        $('.required-d-card').addClass('d-none');
+                        $('.required-d-card').removeClass('d-block');
+                        $('.block-debit').hide();
+                    } else {
+                        $('.required-d-card').addClass('d-block');
+                        $('.required-d-card').removeClass('d-none');
+                        $('.block-debit').show();
+                    }
+                });
+
+                $('#formFile').change(function () {
+                    $(this).prev('label').clone();
+                    $(this).prev('#imageName').clone();
+                    var file = $('#formFile')[0].files[0].name;
+                    console.log('file', $('#formFile')[0].files[0]);
+                    $(this).prev('label').text(file);
+                    $(this).prev('#imageName').text(file);
+                });
+
+                // selector library global
+                $('.js-selector').select2();
+
+                // datepicker
+                let listDate = ["datepicker", 'issue_date', 'exp_date'];
+
+                listDate.map(d => $(`#${d}`).datepicker({
+                    format: 'dd/mm/yyyy'
+                }));
+
+                //add more account
+                $('#add-acc').on('click', () => {
+                    let n_child =
+                        $('.acc-container').children('.container-fluid').length;
+                    //active-in selector library after click
+
+                    let acc_template = `<div class="container-fluid">
+                            <div class=" row">
+                                <div class="col-10 col-sm-11 p-2">
+                                    <div class="inputbox bg-white mt-3 d-flex align-items-center ">
+                                        <img class="position-absolute" src="../images/profile.svg" style="height: 15px; top: 19px; bottom: 0px; left: 0px; padding-left: 18px;" />
+                                        <select style="border: none; height: 100%;  width: 80%;"
+                                            class="input js-selector">
+                                            <option value="Saving Account">Saving Account</option>
+                                            <option value="Current Account">Current Account</option>
+                                            <option value="RGC Payroll Account">RGC Payroll Account</option>
+                                            <option value="Elite Account">Elite Account</option>
+                                        </select>
+                                        <label>Account Types
+                                            <div class="d-inline-flex" style="color: #921d1d">*</div>
+                                        </label>
+
+                                        <img src="../images/arrow-down.svg" alt="down" class="arrow-down me-4" />
+
+                                        <div class=" d-flex" style="  border-left: 1px solid #797979;  ">
+                                            <select class=" js-selector "
+                                                style=" width: 100%;  outline: none;  height: 30px;    border-left: 1px solid #797979 !important;  ">
+                                                <option value="USD" selected>USD</option>
+                                                <option value="KHR">KHR</option>
+                                            </select>
+                                        </div>
+                                        <img src="../images/arrow-down.svg" alt="down" class="ms-4 mt-1 arrow-down" />
+
+                                    </div>
+                                </div>
+                                <div class="col-2 col-sm-1 p-2 mt-2 d-flex justify-content-end">
+                                    <img src="../images/minus.svg" id="remove-acc-${n_child + 1
+                        }" alt="minus" width="30"
+                                        style="margin-top: 10px">
+                                </div>
+                            </div>
+                        </div>`;
+
+                    if (n_child < 7) {
+                        $('.acc-container').append(acc_template);
+                    }
+
+                    $('.js-selector').select2();
+
+                    $(`#remove-acc-${n_child + 1}`).click(() => {
+                        $(`#remove-acc-${n_child + 1}`)
+                            .closest('.container-fluid')
+                            .remove();
+                    });
+                });
+            });
+
+            //by Thol
+            let listDate = ['issueDate', 'expireDate']
+
+                listDate.map((d) =>
+                $(`#${d}`).datepicker({
+                    format: 'dd/mm/yyyy',
+                    autoclose: true,
+                    todayHighlight: true,
+                })
+                )
+
+                $('#issueDate').change(() => {
+                $('#expireDate').datepicker('setStartDate', $('#issueDate').val())
+                })
+
+            // End by Thol
+
+            $(document).on('select2:open', (e) => {
+                document.querySelector(".select2-container--open .select2-search__field").focus();
+            });
+        </script>
+    </body>
+
+    <style>
+        .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+            background: linear-gradient(139.4deg, #121b67 0%, #ed4055 60.42%, #edd62c 97.26%, #edda2b 105.51%, #edde2a 105.52%, #ede229 105.53%, #615e11 108.85%, #ede927 108.86%, #edeb27 108.87%, #edec26 108.88%, #edee26 108.89%, #edf224 108.9%, #edf623 108.92%, #edfb22 108.93%, #edff21 108.94%, #edff21 108.94%, #edff21 108.94%, #edff21 108.94%, #edff21 108.94%, #edff21 108.94%)
+        }
+
+        .select2-search__field:focus {
+            outline: none;
+        }
+
+        .select2-selection.select2-selection--single {
+            min-width: 80px;
+        }
+
+        .datepicker table tr td.active.active:hover {
+            background: linear-gradient(139.4deg,
+                    #121b67 0%,
+                    #ed4055 60.42%,
+                    #edd62c 97.26%,
+                    #edda2b 105.51%,
+                    #edde2a 105.52%,
+                    #ede229 105.53%,
+                    #615e11 108.85%,
+                    #ede927 108.86%,
+                    #edeb27 108.87%,
+                    #edec26 108.88%,
+                    #edee26 108.89%,
+                    #edf224 108.9%,
+                    #edf623 108.92%,
+                    #edfb22 108.93%,
+                    #edff21 108.94%,
+                    #edff21 108.94%,
+                    #edff21 108.94%,
+                    #edff21 108.94%,
+                    #edff21 108.94%,
+                    #edff21 108.94%);
+        }
+
+        .gender-label {
+            font-size: 13px;
+            text-align: start;
+            color: #5a5a5a;
+        }
+
+        .button-box {
+            position: relative;
+            width: 100%;
+        }
+
+        .toggle-btn {
+            padding: 8px 40px;
+            cursor: pointer;
+            background: #DBDBDB; 
+            border: 0;
+            outline: none;
+            position: relative;
+            text-align: center;
+            border-radius: 3px;
+            font-size: 14px;
+            width: 48%;
+            color: #313131;
+        }
+
+        .active-in {
+            padding: 8px 40px;
+            cursor: pointer;
+            border: 0;
+            outline: none;
+            position: relative;
+            text-align: center;
+            border-radius: 3px;
+            color: white;
+            background: linear-gradient(139.4deg,
+                    #121b67 0%,
+                    #ed4055 60.42%,
+                    #edd62c 97.26%,
+                    #edda2b 105.51%,
+                    #edde2a 105.52%,
+                    #ede229 105.53%,
+                    #615e11 108.85%,
+                    #ede927 108.86%,
+                    #edeb27 108.87%,
+                    #edec26 108.88%,
+                    #edee26 108.89%,
+                    #edf224 108.9%,
+                    #edf623 108.92%,
+                    #edfb22 108.93%,
+                    #edff21 108.94%,
+                    #edff21 108.94%,
+                    #edff21 108.94%,
+                    #edff21 108.94%,
+                    #edff21 108.94%,
+                    #edff21 108.94%);
+        }
+
+        .select2 {
+            border: none !important;
+        }
+
+        .select2-container--default .select2-selection--single {
+            border: 0px solid #fff;
+            border-radius: 0px;
+            margin-left: 50px;
+        }
+
+        .select2-selection__arrow {
+            display: none;
+        }
+
+        .select2-container--open .select2-dropdown {
+            left: 50px;
+        }
+
+        .select2 .select2-container .select2-container--default .select2-container--below .select2-container--open .select2-container--focus {
+            width: 100%;
+        }
+
+        .select2-container .select2-selection--single .select2-selection__rendered {
+            padding-top: 2px;
+            padding-left: 0px;
+            width: 100%;
+        }
+
+        body {
+            padding: 50px;
+        }
+
+        .wrap-container {
+            background: #fff;
+            opacity: 0.9;
+            padding: 50px;
+            border-radius: 20px;
+        }
+
+        .form-title {
+            font-size: 22px;
+            line-height: 35px;
+        }
+
+        .arrow-icon {
+            width: 38px;
+            margin-right: 20px;
+            margin-top: 7px;
+        }
+
+        .info-container {
+            padding: 0 80px;
+        }
+
+        .canadia-logo {
+            height: 100px;
+        }
+
+        /* update close margin-top by thol */
+        .form-section {
+            font-size: 20px;
+            /* margin-top: 18px; */
+        }
+        /* end of update close margin-top by thol */
+
+        .button-back,
+        .button-continue {
+            padding: 14px 30px;
+        }
+
+        @media screen and (max-width: 1180px) {
+            .ms-4 {
+                padding-right: 1rem;
+            }
+        }
+
+        @media screen and (max-width: 1080px) {
+            .ms-4 {
+                padding-right: 24px;
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+            body {
+                padding: 20px;
+            }
+
+            .wrap-container {
+                padding: 20px;
+                border-radius: 10px;
+            }
+
+            .form-title {
+                font-size: 18px;
+                line-height: 27px;
+            }
+
+            .arrow-icon {
+                width: 25px;
+                margin-right: 20px;
+                margin-top: 5px;
+            }
+
+            .info-container {
+                padding: 0;
+            }
+
+            .ms-4 {
+                padding-right: 24px;
+            }
+
+            .canadia-logo {
+                height: 90px;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            body {
+                padding: 10px;
+            }
+
+            .wrap-container {
+                padding: 10px;
+            }
+
+            .form-title {
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            .canadia-logo {
+                height: 50px;
+            }
+        }
+    </style>
+
+</html>

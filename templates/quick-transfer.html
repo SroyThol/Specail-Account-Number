@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quick Transfer</title>
+        <link rel="icon" type="image/x-icon" href="../images/cana-logo.png" />
+
+        <!-- bootstrap -->
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+            crossorigin="anonymous" /> -->
+
+        <!-- css -->
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <link rel="stylesheet" href="../css/custom.css" />
+
+        <!-- jquery -->
+        <script src="../javascript/jquery.min.js"></script>
+        <style>
+            .wrap-container {
+                height: auto !important;
+            }
+        </style>
+    </head>
+
+    <body class="background-gradient d-flex flex-column align-items-center justify-content-center"
+        style="font-family: 'Eina01-SemiBold', sans-serif;">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+
+        <!-- Container -->
+        <div class="wrap-container white-container position-relative">
+            <div class="d-flex justify-content-between">
+                <a href="./success_transfer.html" class="position-absolute" style="right: 30px; top: 30px">
+                    <svg style="height: 30px" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="15.5" cy="15.5" r="15.5" fill="url(#paint0_linear_471_254)" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M11.2194 11.229C11.3599 11.0884 11.5504 11.0094 11.7491 11.0094C11.9478 11.0094 12.1383 11.0884 12.2788 11.229L15.4953 14.4487L18.7118 11.229C18.7809 11.1573 18.8636 11.1002 18.955 11.0609C19.0464 11.0216 19.1448 11.0009 19.2442 11C19.3437 10.9992 19.4424 11.0181 19.5345 11.0558C19.6265 11.0936 19.7102 11.1493 19.7806 11.2197C19.8509 11.2901 19.9065 11.3738 19.9442 11.466C19.9819 11.5582 20.0008 11.6569 20 11.7565C19.9991 11.8561 19.9784 11.9545 19.9392 12.046C19.8999 12.1375 19.8428 12.2203 19.7713 12.2895L16.5547 15.5092L19.7713 18.729C19.9077 18.8704 19.9833 19.0599 19.9816 19.2565C19.9798 19.4532 19.9011 19.6413 19.7621 19.7803C19.6232 19.9194 19.4353 19.9983 19.2388 20C19.0424 20.0017 18.8531 19.9261 18.7118 19.7895L15.4953 16.5697L12.2788 19.7895C12.1375 19.9261 11.9482 20.0017 11.7518 20C11.5553 19.9983 11.3674 19.9194 11.2285 19.7803C11.0896 19.6413 11.0108 19.4532 11.0091 19.2565C11.0074 19.0599 11.0829 18.8704 11.2194 18.729L14.4359 15.5092L11.2194 12.2895C11.0789 12.1488 11 11.9581 11 11.7592C11 11.5603 11.0789 11.3696 11.2194 11.229Z"
+                            fill="white" />
+                        <defs>
+                            <linearGradient id="paint0_linear_471_254" x1="0" y1="0" x2="43.2989" y2="27.1045"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#121B67" />
+                                <stop offset="0.554587" stop-color="#ED4055" />
+                                <stop offset="0.96845" stop-color="#EDD62C" />
+                                <stop offset="0.96855" stop-color="#EDDA2B" />
+                                <stop offset="0.96865" stop-color="#EDDE2A" />
+                                <stop offset="0.96875" stop-color="#EDE229" />
+                                <stop offset="0.9992" stop-color="#615E11" />
+                                <stop offset="0.9993" stop-color="#EDE927" />
+                                <stop offset="0.9994" stop-color="#EDEB27" />
+                                <stop offset="0.9995" stop-color="#EDEC26" />
+                                <stop offset="0.9996" stop-color="#EDEE26" />
+                                <stop offset="0.9997" stop-color="#EDF224" />
+                                <stop offset="0.9998" stop-color="#EDF623" />
+                                <stop offset="0.9999" stop-color="#EDFB22" />
+                                <stop offset="1" stop-color="#EDFF21" />
+                                <stop offset="1" stop-color="#EDFF21" />
+                                <stop offset="1" stop-color="#EDFF21" />
+                                <stop offset="1" stop-color="#EDFF21" />
+                                <stop offset="1" stop-color="#EDFF21" />
+                                <stop offset="1" stop-color="#EDFF21" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </a>
+            </div>
+            <div class="d-flex align-items-center justify-content-center mb-2">
+                <svg class="quick-icon" viewBox="0 0 67 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M49.8713 11.3167C48.24 9.68333 46.0261 8.75 43.6957 8.75C41.3652 8.75 39.1513 9.68333 37.52 11.3167C35.8887 12.95 34.9565 15.1667 34.9565 17.5C34.9565 19.8333 35.8887 22.05 37.52 23.6833C39.1513 25.3167 41.3652 26.25 43.6957 26.25C46.0261 26.25 48.24 25.3167 49.8713 23.6833C51.5026 22.05 52.4348 19.8333 52.4348 17.5C52.4348 15.1667 51.5026 12.95 49.8713 11.3167ZM20.3913 0V35H67V0H20.3913ZM61.1739 23.3333C59.63 23.3333 58.1443 23.9458 57.0665 25.0542C55.9596 26.1333 55.3478 27.6208 55.3478 29.1667H32.0435C32.0435 27.6208 31.4317 26.1333 30.3248 25.0542C29.247 23.9458 27.7613 23.3333 26.2174 23.3333V11.6667C27.7613 11.6667 29.247 11.0542 30.3248 9.94583C31.4317 8.86667 32.0435 7.37917 32.0435 5.83333H55.3478C55.3478 7.37917 55.9596 8.86667 57.0665 9.94583C58.1443 11.0542 59.63 11.6667 61.1739 11.6667V23.3333ZM14.5652 5.83333H8.73913C7.13696 5.83333 5.82609 4.52083 5.82609 2.91667C5.82609 1.3125 7.13696 0 8.73913 0H14.5652V5.83333ZM14.5652 20.4167H5.82609C4.22391 20.4167 2.91304 19.1042 2.91304 17.5C2.91304 15.8958 4.22391 14.5833 5.82609 14.5833H14.5652V20.4167ZM14.5652 35H2.91304C1.30504 35 0 33.6875 0 32.0833C0 30.4792 1.30504 29.1667 2.91304 29.1667H14.5652V35Z"
+                        fill="url(#paint0_linear_213_113)" />
+                    <defs>
+                        <linearGradient id="paint0_linear_213_113" x1="0" y1="0" x2="53.4705" y2="64.0745"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#121B67" />
+                            <stop offset="0.554587" stop-color="#ED4055" />
+                            <stop offset="0.96845" stop-color="#EDD62C" />
+                            <stop offset="0.96855" stop-color="#EDDA2B" />
+                            <stop offset="0.96865" stop-color="#EDDE2A" />
+                            <stop offset="0.96875" stop-color="#EDE229" />
+                            <stop offset="0.9992" stop-color="#615E11" />
+                            <stop offset="0.9993" stop-color="#EDE927" />
+                            <stop offset="0.9994" stop-color="#EDEB27" />
+                            <stop offset="0.9995" stop-color="#EDEC26" />
+                            <stop offset="0.9996" stop-color="#EDEE26" />
+                            <stop offset="0.9997" stop-color="#EDF224" />
+                            <stop offset="0.9998" stop-color="#EDF623" />
+                            <stop offset="0.9999" stop-color="#EDFB22" />
+                            <stop offset="1" stop-color="#EDFF21" />
+                            <stop offset="1" stop-color="#EDFF21" />
+                            <stop offset="1" stop-color="#EDFF21" />
+                            <stop offset="1" stop-color="#EDFF21" />
+                            <stop offset="1" stop-color="#EDFF21" />
+                            <stop offset="1" stop-color="#EDFF21" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="tab row mx-0">
+                <div class="col-6 px-0">
+                    <button class="tablinks w-100 text-center">
+                        Quick Deposit
+                    </button>
+                </div>
+                <div class="col-6 px-0">
+                    <button class="tablinks active w-100 text-center" onclick="openCity(event, 'quick-transfer')">
+                        Quick Transfer-In
+                    </button>
+                </div>
+            </div>
+
+            <div id="quick-deposit" class="tabcontent  "
+                style=" display: none; padding-top: 15px;  transition: 0.6s;  ">
+                <div class=" d-flex flex-column justify-content-between" style=" transition: 0.6s; height: 350px;">
+                    <div class="">
+                        <div class="inputbox">
+                            <svg class="position-absolute" style="
+                                  height: 15px;
+                                  top: 19px;
+                                  bottom: 0px;
+                                  left: 0px;
+                                  padding-left: 18px;
+                                " viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6.125 7C8.05 7 9.625 5.425 9.625 3.5C9.625 1.575 8.05 0 6.125 0C4.2 0 2.625 1.575 2.625 3.5C2.625 5.425 4.2 7 6.125 7ZM9.625 14V9.3625C8.6625 9.0125 7.4375 8.75 6.125 8.75C2.7125 8.75 0 10.325 0 12.25V14H9.625ZM19.25 0H13.125C12.1625 0 11.375 0.7875 11.375 1.75V12.25C11.375 13.2125 12.1625 14 13.125 14H19.25C20.2125 14 21 13.2125 21 12.25V1.75C21 0.7875 20.2125 0 19.25 0ZM15.75 12.25H14V1.75H15.75V12.25Z"
+                                    fill="black" />
+                                <path
+                                    d="M6.125 7C8.05 7 9.625 5.425 9.625 3.5C9.625 1.575 8.05 0 6.125 0C4.2 0 2.625 1.575 2.625 3.5C2.625 5.425 4.2 7 6.125 7ZM9.625 14V9.3625C8.6625 9.0125 7.4375 8.75 6.125 8.75C2.7125 8.75 0 10.325 0 12.25V14H9.625ZM19.25 0H13.125C12.1625 0 11.375 0.7875 11.375 1.75V12.25C11.375 13.2125 12.1625 14 13.125 14H19.25C20.2125 14 21 13.2125 21 12.25V1.75C21 0.7875 20.2125 0 19.25 0ZM15.75 12.25H14V1.75H15.75V12.25Z"
+                                    fill="url(#paint0_linear_213_130)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_213_130" x1="0" y1="0" x2="21.6962" y2="20.3722"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#121B67" />
+                                        <stop offset="0.554587" stop-color="#ED4055" />
+                                        <stop offset="0.96845" stop-color="#EDD62C" />
+                                        <stop offset="0.96855" stop-color="#EDDA2B" />
+                                        <stop offset="0.96865" stop-color="#EDDE2A" />
+                                        <stop offset="0.96875" stop-color="#EDE229" />
+                                        <stop offset="0.9992" stop-color="#615E11" />
+                                        <stop offset="0.9993" stop-color="#EDE927" />
+                                        <stop offset="0.9994" stop-color="#EDEB27" />
+                                        <stop offset="0.9995" stop-color="#EDEC26" />
+                                        <stop offset="0.9996" stop-color="#EDEE26" />
+                                        <stop offset="0.9997" stop-color="#EDF224" />
+                                        <stop offset="0.9998" stop-color="#EDF623" />
+                                        <stop offset="0.9999" stop-color="#EDFB22" />
+                                        <stop offset="1" stop-color="#EDFF21" />
+                                        <stop offset="1" stop-color="#EDFF21" />
+                                        <stop offset="1" stop-color="#EDFF21" />
+                                        <stop offset="1" stop-color="#EDFF21" />
+                                        <stop offset="1" stop-color="#EDFF21" />
+                                        <stop offset="1" stop-color="#EDFF21" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <input style="border: none; background: none" class="input" type="number" required />
+                            <label>Account Number
+                                <div class="d-inline-flex" style="color: #921d1d">*</div>
+                            </label>
+                        </div>
+
+                        <!-- currency section -->
+                        <div class="" style="padding-top: 20px;">
+                            <div class="currency-label">Currency</div>
+                            <div class="button-box d-flex justify-content-between">
+                                <button onclick="rielClick()" type="button" id="riel-btn"
+                                    class="toggle-currency active-currency d-flex align-items-center justify-content-center">
+                                    <span class="pe-2" style="font-size: 19px; line-height: 12px; font-weight: 700">
+                                        ៛</span>
+                                    <div>KHR</div>
+                                </button>
+                                <button onclick="usdClick()" type="button" id="usd-btn"
+                                    class="toggle-currency d-flex align-items-center justify-content-center">
+                                    <span class="pe-2" style="font-size: 19px; line-height: 12px">
+                                        $</span>
+                                    <div>USD</div>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="" style="padding-top: 35px;">
+                            <div class="inputbox">
+                                <svg class="position-absolute" style="
+                                  height: 15px;
+                                  top: 19px;
+                                  bottom: 0px;
+                                  left: 0px;
+                                  padding-left: 18px;
+                                " viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0 0H18V12H0V0ZM9 3C9.79565 3 10.5587 3.31607 11.1213 3.87868C11.6839 4.44129 12 5.20435 12 6C12 6.79565 11.6839 7.55871 11.1213 8.12132C10.5587 8.68393 9.79565 9 9 9C8.20435 9 7.44129 8.68393 6.87868 8.12132C6.31607 7.55871 6 6.79565 6 6C6 5.20435 6.31607 4.44129 6.87868 3.87868C7.44129 3.31607 8.20435 3 9 3ZM4 2C4 2.53043 3.78929 3.03914 3.41421 3.41421C3.03914 3.78929 2.53043 4 2 4V8C2.53043 8 3.03914 8.21071 3.41421 8.58579C3.78929 8.96086 4 9.46957 4 10H14C14 9.46957 14.2107 8.96086 14.5858 8.58579C14.9609 8.21071 15.4696 8 16 8V4C15.4696 4 14.9609 3.78929 14.5858 3.41421C14.2107 3.03914 14 2.53043 14 2H4Z"
+                                        fill="url(#paint0_linear_213_134)" />
+                                    <defs>
+                                        <linearGradient id="paint0_linear_213_134" x1="0" y1="0" x2="18.5967"
+                                            y2="17.4619" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#121B67" />
+                                            <stop offset="0.554587" stop-color="#ED4055" />
+                                            <stop offset="0.96845" stop-color="#EDD62C" />
+                                            <stop offset="0.96855" stop-color="#EDDA2B" />
+                                            <stop offset="0.96865" stop-color="#EDDE2A" />
+                                            <stop offset="0.96875" stop-color="#EDE229" />
+                                            <stop offset="0.9992" stop-color="#615E11" />
+                                            <stop offset="0.9993" stop-color="#EDE927" />
+                                            <stop offset="0.9994" stop-color="#EDEB27" />
+                                            <stop offset="0.9995" stop-color="#EDEC26" />
+                                            <stop offset="0.9996" stop-color="#EDEE26" />
+                                            <stop offset="0.9997" stop-color="#EDF224" />
+                                            <stop offset="0.9998" stop-color="#EDF623" />
+                                            <stop offset="0.9999" stop-color="#EDFB22" />
+                                            <stop offset="1" stop-color="#EDFF21" />
+                                            <stop offset="1" stop-color="#EDFF21" />
+                                            <stop offset="1" stop-color="#EDFF21" />
+                                            <stop offset="1" stop-color="#EDFF21" />
+                                            <stop offset="1" stop-color="#EDFF21" />
+                                            <stop offset="1" stop-color="#EDFF21" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <input style="border: none; background: none" class="input" type="text"
+                                    pattern="^(\$|៛)\d{1,3}(,\d{3})*(\.\d+)?$" value="" data-type="currency" required />
+                                <label>Amount
+                                    <div class="d-inline-flex" style="color: #921d1d">*</div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="exchange-account-rate" style="font-size: 12px; padding: 0px 0px 15px 0px;">
+
+                        <span>Receiver account will get: KHR 85,000</span>
+                        <br>
+                        <span>Exchange Rate: USD 1 = KHR 4,066</span>
+
+                    </div> -->
+
+                    <div class="btn-deposit">
+                        <button class="btn rounded-1 text-white deposit-btn">
+                            Deposit
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="quick-transfer" class="tabcontent" style="display: block">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <img src="../images/khqr.jpg" class="khqr-code" alt="" />
+
+                    <div class="d-flex align-items-center">
+                        <select class="input js-selector me-2" style="
+                border: none;
+                color: #656565;
+                font-size: 13px;
+                outline: none;
+                height: 100%;
+                margin: 14px 0;
+              " required>
+                            <option value="monthly">Saving Account USD (0010003378035)</option>
+                            <option value="yearly">Saving Account USD (0010003378035)</option>
+                        </select>
+                        <svg style="width: 6px" viewBox="0 0 6 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 3L0.401924 0.75H5.59808L3 3Z" fill="#313131" />
+                        </svg>
+                    </div>
+
+
+                    <!-- input amount -->
+                    <div class="inputbox position-relative" style="width: 80% !important;">
+                        <svg class="position-absolute" style="
+                height: 15px;
+                top: 19px;
+                bottom: 0px;
+                left: 0px;
+                padding-left: 18px;
+              " viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0 0H18V12H0V0ZM9 3C9.79565 3 10.5587 3.31607 11.1213 3.87868C11.6839 4.44129 12 5.20435 12 6C12 6.79565 11.6839 7.55871 11.1213 8.12132C10.5587 8.68393 9.79565 9 9 9C8.20435 9 7.44129 8.68393 6.87868 8.12132C6.31607 7.55871 6 6.79565 6 6C6 5.20435 6.31607 4.44129 6.87868 3.87868C7.44129 3.31607 8.20435 3 9 3ZM4 2C4 2.53043 3.78929 3.03914 3.41421 3.41421C3.03914 3.78929 2.53043 4 2 4V8C2.53043 8 3.03914 8.21071 3.41421 8.58579C3.78929 8.96086 4 9.46957 4 10H14C14 9.46957 14.2107 8.96086 14.5858 8.58579C14.9609 8.21071 15.4696 8 16 8V4C15.4696 4 14.9609 3.78929 14.5858 3.41421C14.2107 3.03914 14 2.53043 14 2H4Z"
+                                fill="url(#paint0_linear_213_185)" />
+                            <defs>
+                                <linearGradient id="paint0_linear_213_185" x1="0" y1="0" x2="18.5967" y2="17.4619"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#121B67" />
+                                    <stop offset="0.554587" stop-color="#ED4055" />
+                                    <stop offset="0.96845" stop-color="#EDD62C" />
+                                    <stop offset="0.96855" stop-color="#EDDA2B" />
+                                    <stop offset="0.96865" stop-color="#EDDE2A" />
+                                    <stop offset="0.96875" stop-color="#EDE229" />
+                                    <stop offset="0.9992" stop-color="#615E11" />
+                                    <stop offset="0.9993" stop-color="#EDE927" />
+                                    <stop offset="0.9994" stop-color="#EDEB27" />
+                                    <stop offset="0.9995" stop-color="#EDEC26" />
+                                    <stop offset="0.9996" stop-color="#EDEE26" />
+                                    <stop offset="0.9997" stop-color="#EDF224" />
+                                    <stop offset="0.9998" stop-color="#EDF623" />
+                                    <stop offset="0.9999" stop-color="#EDFB22" />
+                                    <stop offset="1" stop-color="#EDFF21" />
+                                    <stop offset="1" stop-color="#EDFF21" />
+                                    <stop offset="1" stop-color="#EDFF21" />
+                                    <stop offset="1" stop-color="#EDFF21" />
+                                    <stop offset="1" stop-color="#EDFF21" />
+                                    <stop offset="1" stop-color="#EDFF21" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <input style="border: none; background: none; " class="input quick" type="text"
+                            pattern="^?\d{1,3}(,\d{3})*(\.\d+)?$" value="" data-type="currency" required />
+                        <label>Amount
+                            <div class="d-inline-flex" style="color: #921d1d">*</div>
+                        </label>
+
+                        <div style="
+                position: absolute;
+                top: 50%;
+                translate: 0 -50%;
+                right: 10px;
+              ">
+
+                            <!-- clear button -->
+                            <svg style="width: 7px; height: 7px; margin-right: 10px;" viewBox="0 0 5 5" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M0.121872 0.127203C0.19993 0.0490906 0.305785 0.00520908 0.416159 0.00520908C0.526533 0.00520908 0.632388 0.0490906 0.710446 0.127203L2.4974 1.91595L4.28435 0.127203C4.32275 0.0874076 4.36868 0.0556649 4.41946 0.0338279C4.47025 0.0119908 4.52487 0.000496489 4.58014 1.57321e-05C4.6354 -0.000465025 4.69022 0.0100773 4.74137 0.0310276C4.79253 0.051978 4.839 0.0829168 4.87808 0.122039C4.91717 0.161161 4.94807 0.207682 4.969 0.258889C4.98993 0.310096 5.00046 0.364963 4.99998 0.420287C4.9995 0.475612 4.98802 0.530287 4.96621 0.581122C4.94439 0.631957 4.91268 0.677934 4.87292 0.71637L3.08597 2.50512L4.87292 4.29387C4.94875 4.37245 4.9907 4.4777 4.98975 4.58695C4.98881 4.6962 4.94503 4.80071 4.86785 4.87796C4.79068 4.95521 4.68628 4.99903 4.57714 4.99998C4.468 5.00093 4.36286 4.95894 4.28435 4.88304L2.4974 3.09429L0.710446 4.88304C0.631941 4.95894 0.526796 5.00093 0.417657 4.99998C0.308518 4.99903 0.204118 4.95521 0.126942 4.87796C0.0497665 4.80071 0.00599004 4.6962 0.00504165 4.58695C0.00409327 4.4777 0.0460489 4.37245 0.121872 4.29387L1.90882 2.50512L0.121872 0.71637C0.0438374 0.638233 0 0.532272 0 0.421787C0 0.311302 0.0438374 0.20534 0.121872 0.127203Z"
+                                    fill="url(#paint0_linear_213_186)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_213_186" x1="0" y1="0" x2="6.98369" y2="4.37169"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#121B67" />
+                                        <stop offset="0.554587" stop-color="#ED4055" />
+                                        <stop offset="0.96845" stop-color="#EDD62C" />
+                                        <stop offset="0.96855" stop-color="#EDDA2B" />
+                                        <stop offset="0.96865" stop-color="#EDDE2A" />
+                                        <stop offset="0.96875" stop-color="#EDE229" />
+                                        <stop offset="0.9992" stop-color="#615E11" />
+                                        <stop offset="0.9993" stop-color="#EDE927" />
+                                        <stop offset="0.9994" stop-color="#EDEB27" />
+                                        <stop offset="0.9995" stop-color="#EDEC26" />
+                                        <stop offset="0.9996" stop-color="#EDEE26" />
+                                        <stop offset="0.9997" stop-color="#EDF224" />
+                                        <stop offset="0.9998" stop-color="#EDF623" />
+                                        <stop offset="0.9999" stop-color="#EDFB22" />
+                                        <stop offset="1" stop-color="#EDFF21" />
+                                        <stop offset="1" stop-color="#EDFF21" />
+                                        <stop offset="1" stop-color="#EDFF21" />
+                                        <stop offset="1" stop-color="#EDFF21" />
+                                        <stop offset="1" stop-color="#EDFF21" />
+                                        <stop offset="1" stop-color="#EDFF21" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+
+                            <button class="btn custom-btn text-white py-2 px-3" style="
+                  background-image: url('../images/bg-button.png');
+                  background-position: left;
+                  background-size: cover;
+                  border: none;
+                  font-size: 12px; 
+                  background-repeat: no-repeat;
+                ">
+                                Add
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- screenshot & sharelink -->
+                    <div class=" d-flex align-items-center mt-4">
+                        <button style="border: none; outline: none; background: transparent;"
+                            class="me-4 d-flex flex-column justify-content-center align-items-center">
+                            <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="17" cy="17" r="17" fill="url(#paint0_linear_213_169)" fill-opacity="0.19" />
+                                <path
+                                    d="M11 20V20.75C11 21.3467 11.2371 21.919 11.659 22.341C12.081 22.7629 12.6533 23 13.25 23H20.75C21.3467 23 21.919 22.7629 22.341 22.341C22.7629 21.919 23 21.3467 23 20.75V20M20 17L17 20M17 20L14 17M17 20V11"
+                                    stroke="#940000" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_213_169" x1="0" y1="0" x2="47.4891" y2="29.7275"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#121B67" />
+                                        <stop offset="0.554587" stop-color="#ED4055" />
+                                        <stop offset="0.96845" stop-color="#EDD62C" />
+                                        <stop offset="0.96855" stop-color="#EDDA2B" />
+                                        <stop offset="0.96865" stop-color="#EDDE2A" />
+                                        <stop offset="0.96875" stop-color="#EDE229" />
+                                        <stop offset="0.9992" stop-color="#615E11" />
+                                        <stop offset="0.9993" stop-color="#EDE927" />
+                                        <stop offset="0.9994" stop-color="#EDEB27" />
+                                        <stop offset="0.9995" stop-color="#EDEC26" />
+                                        <stop offset="0.9996" stop-color="#EDEE26" />
+                                        <stop offset="0.9997" stop-color="#EDF224" />
+                                        <stop offset="0.9998" stop-color="#EDF623" />
+                                        <stop offset="0.9999" stop-color="#EDFB22" />
+                                        <stop offset="1" stop-color="#EDFF21" />
+                                        <stop offset="1" stop-color="#EDFF21" />
+                                        <stop offset="1" stop-color="#EDFF21" />
+                                        <stop offset="1" stop-color="#EDFF21" />
+                                        <stop offset="1" stop-color="#EDFF21" />
+                                        <stop offset="1" stop-color="#EDFF21" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div class="pt-2 custom-text text-center" style="font-size: 13px;">Screenshot</div>
+
+                        </button>
+                        <button style="outline: none; border: none; background: transparent;"
+                            class="ms-4 d-flex flex-column justify-content-center align-items-center">
+                            <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="17" cy="17" r="17" fill="url(#paint0_linear_903_34)" fill-opacity="0.19" />
+                                <path
+                                    d="M17.4931 15.9069C16.9764 15.3903 16.2756 15.1001 15.545 15.1001C14.8143 15.1001 14.1135 15.3903 13.5968 15.9069L10.8412 18.6624C10.5781 18.9166 10.3681 19.2207 10.2237 19.5568C10.0793 19.893 10.0033 20.2546 10.0001 20.6205C9.99692 20.9864 10.0666 21.3492 10.2052 21.6879C10.3437 22.0265 10.5484 22.3342 10.8071 22.5929C11.0658 22.8516 11.3735 23.0563 11.7121 23.1948C12.0508 23.3334 12.4136 23.4031 12.7795 23.3999C13.1454 23.3967 13.507 23.3207 13.8432 23.1763C14.1793 23.0319 14.4834 22.8219 14.7376 22.5588L15.4967 21.8003M14.9746 18.4254C15.4913 18.942 16.1921 19.2322 16.9227 19.2322C17.6534 19.2322 18.3542 18.942 18.8709 18.4254L21.6265 15.6699C22.1284 15.1502 22.4062 14.4541 22.3999 13.7316C22.3936 13.0091 22.1038 12.318 21.5929 11.8071C21.082 11.2962 20.3909 11.0064 19.6684 11.0001C18.9459 10.9938 18.2498 11.2716 17.7301 11.7735L16.9723 12.5313"
+                                    stroke="#940000" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_903_34" x1="0" y1="0" x2="47.4891" y2="29.7275"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#121B67" />
+                                        <stop offset="0.554587" stop-color="#ED4055" />
+                                        <stop offset="0.96845" stop-color="#EDD62C" />
+                                        <stop offset="0.96855" stop-color="#EDDA2B" />
+                                        <stop offset="0.96865" stop-color="#EDDE2A" />
+                                        <stop offset="0.96875" stop-color="#EDE229" />
+                                        <stop offset="0.9992" stop-color="#615E11" />
+                                        <stop offset="0.9993" stop-color="#EDE927" />
+                                        <stop offset="0.9994" stop-color="#EDEB27" />
+                                        <stop offset="0.9995" stop-color="#EDEC26" />
+                                        <stop offset="0.9996" stop-color="#EDEE26" />
+                                        <stop offset="0.9997" stop-color="#EDF224" />
+                                        <stop offset="0.9998" stop-color="#EDF623" />
+                                        <stop offset="0.9999" stop-color="#EDFB22" />
+                                        <stop offset="1" stop-color="#EDFF21" />
+                                        <stop offset="1" stop-color="#EDFF21" />
+                                        <stop offset="1" stop-color="#EDFF21" />
+                                        <stop offset="1" stop-color="#EDFF21" />
+                                        <stop offset="1" stop-color="#EDFF21" />
+                                        <stop offset="1" stop-color="#EDFF21" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+
+                            <div class="pt-2 custom-text text-center" style="font-size: 13px;">Share</div>
+
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- End of container -->
+    </body>
+
+    <script>
+        // select currency
+        var rielBtn = document.getElementById("riel-btn");
+        var usdBtn = document.getElementById("usd-btn");
+        let isRiel = $(rielBtn).hasClass("active-currency");
+        let inputCurrency = $("input[data-type='currency']");
+
+        function rielClick() {
+            usdBtn.classList.remove("active-currency");
+            rielBtn.classList.add("active-currency");
+            isRiel = $(rielBtn).hasClass("active-currency");
+            inputCurrency.val('');
+        }
+
+        function usdClick() {
+            rielBtn.classList.remove("active-currency");
+            usdBtn.classList.add("active-currency");
+            isRiel = $(rielBtn).hasClass("active-currency");
+            inputCurrency.val('');
+        }
+
+        // switch tab
+        function openCity(evt, cityName = "quick-transfer") {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+
+        //currency
+        inputCurrency.on({
+            keyup: function () {
+                isRiel ? formatCurrency($(this), '', "៛") : formatCurrency($(this));
+            },
+            blur: function () {
+                isRiel ? formatCurrency($(this), 'blur', "៛") : formatCurrency($(this), 'blur');
+            }
+        });
+
+
+        function formatNumber(n) {
+            // format number 1000000 to 1,234,567
+            return n.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+
+
+        function formatCurrency(input, blur, currency = '$') {
+            // appends $ to value, validates decimal side
+            // and puts cursor back in right position.
+
+            // get quick transfer input
+            let quickInput = input.hasClass("quick");
+
+            // get input value
+            var input_val = input.val();
+
+            // don't validate empty input
+            if (input_val === "") { return; }
+
+            // original length
+            var original_len = input_val.length;
+
+            // initial caret position 
+            var caret_pos = input.prop("selectionStart");
+
+            // check for decimal
+            if (input_val.indexOf(".") >= 0) {
+
+                // get position of first decimal
+                // this prevents multiple decimals from
+                // being entered
+                var decimal_pos = input_val.indexOf(".");
+
+                // split number by decimal point
+                var left_side = input_val.substring(0, decimal_pos);
+                var right_side = input_val.substring(decimal_pos);
+
+                // add commas to left side of number
+                left_side = formatNumber(left_side);
+
+                // validate right side
+                right_side = formatNumber(right_side);
+
+                // On blur make sure 2 numbers after decimal
+                if (blur === "blur") {
+                    right_side += "00";
+                }
+
+                // Limit decimal to only 2 digits
+                right_side = right_side.substring(0, 2);
+
+                // join number by .
+                input_val = `${quickInput ? "" : currency}${left_side}.${right_side}`;
+
+            } else {
+                // no decimal entered
+                // add commas to number
+                // remove all non-digits
+                input_val = formatNumber(input_val);
+                input_val = `${quickInput ? "" : currency}${input_val}`;
+
+                // final formatting
+                if (blur === "blur") {
+                    input_val += ".00";
+                }
+            }
+
+            // send updated string to input
+            input.val(input_val);
+
+            // put caret back in the right position
+            var updated_len = input_val.length;
+            caret_pos = updated_len - original_len + caret_pos;
+            input[0].setSelectionRange(caret_pos, caret_pos);
+        }
+    </script>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+        }
+
+        .wrap-container {
+            width: 100%;
+            height: 700px;
+            max-width: 650px;
+            padding: 40px 90px;
+            transition: 0.8s;
+
+        }
+
+        .white-container {
+            /* background: rgb(255, 255, 255); */
+            /* background: white;
+        opacity: 0.8; */
+            background: #fff;
+            opacity: 0.85;
+            border-radius: 20px;
+        }
+
+        .currency-label {
+            font-size: 14px;
+            padding-bottom: 3px;
+            text-align: start;
+            color: #5a5a5a;
+        }
+
+        .quick-icon {
+            width: 67px
+        }
+
+        .button-box {
+            position: relative;
+            width: 100%;
+        }
+
+        .toggle-currency {
+            height: 50px;
+            cursor: pointer;
+            background: transparent;
+            border: 1px solid #8b8b8b;
+            outline: none;
+            position: relative;
+            text-align: center;
+            border-radius: 4px;
+            font-size: 16px;
+            width: 48%;
+            color: #313131;
+        }
+
+        .active-currency {
+            padding: 8px 40px;
+            cursor: pointer;
+            border: 0;
+            outline: none;
+            position: relative;
+            text-align: center;
+            border-radius: 4px;
+            color: white;
+            background: linear-gradient(122.05deg,
+                    #121b67 0%,
+                    #ed4055 66.31%,
+                    #edd62c 115.79%,
+                    #edda2b 115.8%,
+                    #edde2a 115.81%,
+                    #ede229 115.83%,
+                    #615e11 119.47%,
+                    #ede927 119.48%,
+                    #edeb27 119.49%,
+                    #edec26 119.5%,
+                    #edee26 119.51%,
+                    #edf224 119.53%,
+                    #edf623 119.54%,
+                    #edfb22 119.55%,
+                    #edff21 119.56%,
+                    #edff21 119.56%,
+                    #edff21 119.56%,
+                    #edff21 119.56%,
+                    #edff21 119.56%,
+                    #edff21 119.56%),
+                #dbdbdb;
+        }
+
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 18px;
+            color: #656565;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            font-size: 18px;
+            background: linear-gradient(122.05deg,
+                    #121b67 0%,
+                    #ed4055 66.31%,
+                    #edd62c 115.79%,
+                    #edda2b 115.8%,
+                    #edde2a 115.81%,
+                    #ede229 115.83%,
+                    #615e11 119.47%,
+                    #ede927 119.48%,
+                    #edeb27 119.49%,
+                    #edec26 119.5%,
+                    #edee26 119.51%,
+                    #edf224 119.53%,
+                    #edf623 119.54%,
+                    #edfb22 119.55%,
+                    #edff21 119.56%,
+                    #edff21 119.56%,
+                    #edff21 119.56%,
+                    #edff21 119.56%,
+                    #edff21 119.56%,
+                    #edff21 119.56%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+
+
+            border-bottom: 2px solid transparent;
+            border-image: linear-gradient(122.05deg, #121B67 0%, #ED4055 66.31%, #EDD62C 115.79%, #EDDA2B 115.8%, #EDDE2A 115.81%, #EDE229 115.83%, #615E11 119.47%, #EDE927 119.48%, #EDEB27 119.49%, #EDEC26 119.5%, #EDEE26 119.51%, #EDF224 119.53%, #EDF623 119.54%, #EDFB22 119.55%, #EDFF21 119.56%, #EDFF21 119.56%, #EDFF21 119.56%, #EDFF21 119.56%, #EDFF21 119.56%, #EDFF21 119.56%);
+            border-image-slice: 1;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            border-top: none;
+            transition: 0.6s;
+            animation: fadein 0.8s;
+            /* padding-top: 10px; */
+        }
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .khqr-code {
+            height: 320px;
+            border-radius: 15px;
+            /* border: 1px solid red;
+        box-shadow: ; */
+            z-index: 1;
+            /* position: absolute; */
+            filter: drop-shadow(3px 4px 10px rgba(0, 0, 0, 0.15));
+
+            /* background-color: red; */
+        }
+
+        .deposit-btn {
+            border: none;
+            outline: none;
+            width: 100%;
+            padding: 10px 0;
+            background: linear-gradient(122.05deg,
+                    #121b67 0%,
+                    #ed4055 66.31%,
+                    #edd62c 115.79%,
+                    #edda2b 115.8%,
+                    #edde2a 115.81%,
+                    #ede229 115.83%,
+                    #615e11 119.47%,
+                    #ede927 119.48%,
+                    #edeb27 119.49%,
+                    #edec26 119.5%,
+                    #edee26 119.51%,
+                    #edf224 119.53%,
+                    #edf623 119.54%,
+                    #edfb22 119.55%,
+                    #edff21 119.56%,
+                    #edff21 119.56%,
+                    #edff21 119.56%,
+                    #edff21 119.56%,
+                    #edff21 119.56%,
+                    #edff21 119.56%);
+        }
+
+        @media screen and (max-width: 1024px) {
+            body {
+                padding: 20px;
+            }
+
+            .wrap-container {
+                border-radius: 18px;
+                padding: 60px 90px;
+            }
+
+            .khqr-code {
+                height: 290px;
+            }
+
+            .quick-icon {
+                width: 55px
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .wrap-container {
+                padding: 50px;
+                border-radius: 8px;
+            }
+
+            .tab button.active,
+            .tab button {
+                font-size: 13px;
+            }
+
+            .toggle-currency {
+                height: 45px;
+                font-size: 13px;
+            }
+
+        }
+
+        @media screen and (max-width: 400px) {
+            body {
+                padding: 10px;
+            }
+
+            .wrap-container {
+                padding: 20px;
+            }
+
+            .quick-icon {
+                width: 45px
+            }
+        }
+    </style>
+
+</html>
